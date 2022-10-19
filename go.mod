@@ -1,4 +1,4 @@
-module github.com/dgraph-io/badger
+module github.com/hsanjuan/badger
 
 go 1.12
 
