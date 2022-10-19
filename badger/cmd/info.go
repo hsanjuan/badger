@@ -153,6 +153,9 @@ func showKeys(db *badger.DB, prefix []byte) error {
 		// 		item.Key(), item.Version())
 		// }
 		totalKeys++
+		if totalKeys%1000000 == 0 {
+			fmt.Println("keys so far:", totalKeys)
+		}
 	}
 	fmt.Print("\n[Summary]\n")
 	fmt.Println("Total Number of keys:", totalKeys)
