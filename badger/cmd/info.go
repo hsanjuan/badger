@@ -147,11 +147,11 @@ func showKeys(db *badger.DB, prefix []byte) error {
 
 	totalKeys := 0
 	for it.Rewind(); it.Valid(); it.Next() {
-		item := it.Item()
-		if err := printKey(item, false); err != nil {
-			return errors.Wrapf(err, "failed to print information about key: %x(%d)",
-				item.Key(), item.Version())
-		}
+		// item := it.Item()
+		// if err := printKey(item, false); err != nil {
+		// 	return errors.Wrapf(err, "failed to print information about key: %x(%d)",
+		// 		item.Key(), item.Version())
+		// }
 		totalKeys++
 	}
 	fmt.Print("\n[Summary]\n")
